@@ -28,15 +28,15 @@ echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 
 mkdir -p /efi/EFI/Linux
 
-git clone https://aur.archlinux.org/paru-bin.git
-
 mkinitcpio -P
 
-useradd -m -G wheel,storage,power -s /bin/bash Jonathan
+useradd -m -G wheel,storage,power -s /bin/bash Jonathan 
 
 echo "123"| passwd -s 
 
 echo "3006" | passwd -s Jonathan
+
+git clone https://aur.archlinux.org/paru-bin.git /home/Jonathan
 
 efibootmgr -B -b 0000
 
