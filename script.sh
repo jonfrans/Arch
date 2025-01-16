@@ -38,7 +38,7 @@ echo "123"| passwd -s
 
 echo "3006" | passwd -s Jonathan
 
-git clone https://aur.archlinux.org/paru-bin.git /home/Jonathan
+git clone https://aur.archlinux.org/paru-bin.git /home/Jonathan/paru
 
 efibootmgr -B -b 0000
 
