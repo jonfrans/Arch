@@ -15,7 +15,3 @@ mount /dev/sda1 --mkdir /mnt/efi
 pacstrap -K /mnt base linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano 
 
 arch-chroot /mnt
-
-mount /dev/sdb1 --mkdir /mnt/usb
-
-bash /mnt/usb/script.sh
