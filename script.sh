@@ -14,7 +14,7 @@ sed -i '/default_options=/s/^#//g' /etc/mkinitcpio.d/linux-zen.preset
 
 sed -i '/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
 
-sed -i -e '/\[multilib]/s/^#//g' -e '/^#\[multilib]/{N;s/\n#/\n/}' Documentos/pacman.conf 
+sed -i -e '/\[multilib]/s/^#//g' -e '/^#\[multilib]/{N;s/\n#/\n/}' /etc/pacman.conf 
 
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 
