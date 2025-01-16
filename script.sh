@@ -2,7 +2,7 @@
 
 sed -i -e '/\[multilib]/s/^#//g' -e '/^#\[multilib]/{N;s/\n#/\n/}' /etc/pacman.conf 
 
-pacman -S efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono --noconfirm && systemctl enable NetworkManager
+pacman -Sy efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono --noconfirm && systemctl enable NetworkManager
 
 uuid=`blkid -s UUID -o value /dev/sda3`
 
