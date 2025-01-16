@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -S efibootmgr networkmanager intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts --noconfirm && systemctl enable NetworkManager
+pacman -S efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts --noconfirm && systemctl enable NetworkManager
 
 uuid=`blkid -s UUID -o value /dev/sda3`
 
