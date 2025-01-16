@@ -1,6 +1,8 @@
 #!/bin/bash
 
-pacman -S efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts --noconfirm && systemctl enable NetworkManager
+sed -i -e '/\[multilib]/s/^#//g' -e '/^#\[multilib]/{N;s/\n#/\n/}' /etc/pacman.conf 
+
+pacman -S efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono --noconfirm && systemctl enable NetworkManager
 
 uuid=`blkid -s UUID -o value /dev/sda3`
 
@@ -13,8 +15,6 @@ sed -i '/default_config=/s/^#//g' /etc/mkinitcpio.d/linux-zen.preset
 sed -i '/default_options=/s/^#//g' /etc/mkinitcpio.d/linux-zen.preset
 
 sed -i '/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
-
-sed -i -e '/\[multilib]/s/^#//g' -e '/^#\[multilib]/{N;s/\n#/\n/}' /etc/pacman.conf 
 
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 
