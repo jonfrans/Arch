@@ -1,6 +1,10 @@
 #!/bin/bash
 
-awk '$0=="#[multilib]"{c=2} c&&c--{sub(/#/,"")} 1' /etc/pacman.conf
+awk '$0=="#[multilib]"{c=2} c&&c--{sub(/#/,"")} 1' /etc/pacman.conf > /pacman.conf
+
+cat /pacman.conf > /etc/pacman.conf
+
+rm -rf /pacman.conf
 
 pacman -Sy efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono --noconfirm && systemctl enable NetworkManager
 
@@ -37,8 +41,6 @@ useradd -m -G wheel,storage,power -s /bin/bash Jonathan
 echo "123"| passwd -s 
 
 echo "3006" | passwd -s Jonathan
-
-git clone https://aur.archlinux.org/paru-bin.git /home/Jonathan/paru
 
 efibootmgr -B -b 0000
 
