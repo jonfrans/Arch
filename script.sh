@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sed -i -e '/\[multilib]/s/^#//g' -e '/^#\[multilib]/{N;s/\n#/\n/}' /etc/pacman.conf 
+awk '$0=="#[multilib]"{c=2} c&&c--{sub(/#/,"")} 1' /etc/pacman.conf
 
 pacman -Sy efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono --noconfirm && systemctl enable NetworkManager
 
