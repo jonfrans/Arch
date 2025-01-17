@@ -34,6 +34,13 @@ echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 
 mkdir -p /efi/EFI/Linux
 
+echo vm.dirty_background_ratio=5 >> /etc/kernel/cmdline
+
+echo vm.vfs_cache_pressure=50 >> /etc/kernel/cmdline
+
+echo vm.swappiness=10 >> /etc/kernel/cmdline
+
+
 mkinitcpio -P
 
 useradd -m -G wheel,storage,power -s /bin/bash Jonathan 
