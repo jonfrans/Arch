@@ -6,7 +6,7 @@ cat /pacman.conf > /etc/pacman.conf
 
 rm -rf /pacman.conf
 
-pacman -Sy efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono --noconfirm && systemctl enable NetworkManager
+pacman -Sy efibootmgr networkmanager man intel-ucode btop nvidia-dkms git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono gamemode mangohud --noconfirm && systemctl enable NetworkManager
 
 uuid=`blkid -s UUID -o value /dev/sda3`
 
