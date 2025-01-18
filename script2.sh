@@ -40,6 +40,7 @@ echo vm.vfs_cache_pressure=50 >> /etc/kernel/cmdline
 
 echo vm.swappiness=10 >> /etc/kernel/cmdline
 
+systemctl enable systemd-oomd
 
 mkinitcpio -P
 
