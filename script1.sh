@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkfs.ntfs /dev/sda3 && mkfs.vfat /dev/sda1
+mkfs.xfs -f /dev/sda3 && mkfs.vfat /dev/sda1
 
 mkswap /dev/sda2
 
