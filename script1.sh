@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkfs.ext4 /dev/sda3
+mkfs.xfs -f /dev/sda3
 
 mkfs.vfat /dev/sda1
 
