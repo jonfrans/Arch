@@ -2,6 +2,8 @@
 
 awk '$0=="#[multilib]"{c=2} c&&c--{sub(/#/,"")} 1' /etc/pacman.conf > /pacman.conf
 
+awk '$0=="# Misc options" {print;print"ILoveCandy"} {print}' /etc/pacman.conf > /pacman.conf
+
 cat /pacman.conf > /etc/pacman.conf
 
 rm -rf /pacman.conf
