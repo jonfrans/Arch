@@ -1,12 +1,6 @@
 #!/bin/bash
 
-awk '$0=="#[multilib]"{c=2} c&&c--{sub(/#/,"")} 1' /etc/pacman.conf > /pacman.conf
-
-awk '/# Misc options/ {print;print"ILoveCandy";next} {print}' pacman.conf > temp.conf 
-
-cat /pacman.conf > /etc/pacman.conf
-
-rm -rf /pacman.conf
+cp -r /mnt/usb/Arch-Script/pacman.conf /etc/pacman.conf
 
 pacman -Sy efibootmgr networkmanager man intel-ucode btop nvidia-dkms xorg libva-utils libva-nvidia-driver libvdpau-va-gl git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono gamemode mangohud --noconfirm && systemctl enable NetworkManager
 
