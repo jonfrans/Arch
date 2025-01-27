@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cp -r /mnt/usb/Arch-Script/pacman.conf /etc/pacman.conf
+git clone https://github.com/jonfrans/Arch /scripts
+
+cp -r /scripts/Arch-Script/pacman.conf /etc/pacman.conf
 
 pacman -Sy efibootmgr flatpak networkmanager man intel-ucode btop nvidia-dkms xorg libva-utils libva-nvidia-driver libvdpau-va-gl git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono gamemode mangohud --noconfirm && systemctl enable NetworkManager
 
