@@ -1,0 +1,58 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "bottom", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+   // "height": 24, // Waybar height (to be removed for auto height)
+   // "width": 1345, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+         "clock"  
+    ],
+    "modules-center": [
+        "custom/arch"
+    ],
+    "modules-right": [
+        "power-profiles-daemon",
+        "custom/notifications",
+        "custom/power",
+    ],
+    // Modules configuration
+    "hyprland/submap": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "clock": {
+        "format": "󰥔 {:%H:%M}",
+        // "timezone": "America/New_York",
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip": false
+    },
+ 
+    "power-profiles-daemon": {
+      "format":"{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": false,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+    "custom/notifications": {
+       "format":"",
+       "on-click": "swaync-client -t -sw",
+       "tooltip":false
+   },
+    "custom/power":{
+        "format":"⏻",
+        "on-click":"$HOME/powermenu.sh"
+   },
+    "custom/arch": {
+        "format":"󰣇",
+        "tooltip":false,
+        "min-lenght": 1300,
+        "max-lenght": 1360,
+        
+   },
+}
