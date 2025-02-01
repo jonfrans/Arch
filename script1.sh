@@ -10,4 +10,4 @@ mount /dev/sda3 /mnt
 
 mount /dev/sda1 --mkdir /mnt/efi
 
-pacstrap -K /mnt base linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano && arch-chroot /mnt
+pacstrap -K /mnt base git base-devel linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano && arch-chroot /mnt
