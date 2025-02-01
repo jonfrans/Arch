@@ -27,8 +27,8 @@
              "HDMI-A-1": 5,
         },
         "format-icons": {
-            "default": "",
-            "focused": "", 
+            "default": "",
+            "active": "", 
        },
     },
     "clock": {
