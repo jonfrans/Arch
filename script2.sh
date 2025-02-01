@@ -4,7 +4,7 @@ git clone https://github.com/jonfrans/Arch /scripts
 
 cp -r /scripts/Arch-Script/pacman.conf /etc/pacman.conf
 
-pacman -Sy efibootmgr flatpak networkmanager man intel-ucode btop nvidia-dkms  libva-utils libva-nvidia-driver libvdpau-va-gl git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono gamemode mangohud --noconfirm && systemctl enable NetworkManager
+pacman -Sy efibootmgr flatpak networkmanager man intel-ucode power-profiles-daemon btop nvidia-dkms  libva-utils libva-nvidia-driver libvdpau-va-gl git base-devel neofetch noto-fonts-emoji noto-fonts-cjk noto-fonts wine wine-gecko wine-mono gamemode mangohud --noconfirm && systemctl enable NetworkManager
 
 uuid=`blkid -s UUID -o value /dev/sda3`
 
