@@ -2,24 +2,34 @@
 {
     // "layer": "bottom", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-   // "height": 24, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
    // "width": 1345, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-         "clock"  
+         "hyprland/workspaces",  
     ],
     "modules-center": [
-        "custom/arch"
+      "clock"
     ],
     "modules-right": [
-        "power-profiles-daemon",
-        "custom/notifications",
-        "custom/power",
+        "group/misc",
+        
     ],
     // Modules configuration
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "persistent-workspaces": {
+             "HDMI-A-1": 5,
+        },
+        "format-icons": {
+            "default": "",
+            "focused": "", 
+       },
     },
     "clock": {
         "format": "󰥔 {:%H:%M}",
@@ -39,20 +49,23 @@
         "power-saver": ""
       }
     },
-    "custom/notifications": {
-       "format":"",
-       "on-click": "swaync-client -t -sw",
-       "tooltip":false
-   },
     "custom/power":{
         "format":"⏻",
         "on-click":"$HOME/powermenu.sh"
    },
-    "custom/arch": {
-        "format":"󰣇",
-        "tooltip":false,
-        "min-lenght": 1300,
-        "max-lenght": 1360,
-        
+    "pulseaudio":{
+     "format": "{icon}",
+     "format-muted": "",
+     "format-icons": {
+        "default": ["",""]
+     }
    },
-}
+   "group/misc":{
+    "modules" : [  
+       "power-profiles-daemon",
+       "pulseaudio",
+       "custom/power",
+     ],
+    "orientation": "inherit",
+   },
+},
