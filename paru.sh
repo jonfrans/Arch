@@ -6,7 +6,5 @@ cd paru-bin/
 
 makepkg -si --noconfirm
 
-paru -Syu oh-my-zsh-git --noconfirm
-
 
 
