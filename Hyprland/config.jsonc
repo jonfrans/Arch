@@ -1,20 +1,21 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "bottom", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 32, // Waybar height (to be removed for auto height)
    // "width": 1345, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 8, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-         "hyprland/workspaces",  
+      "custom/menu",
+      "hyprland/workspaces",
+      "tray",  
     ],
     "modules-center": [
-      "clock"
+      "clock",
     ],
     "modules-right": [
-        "group/misc",
-        
+      "group/right",
     ],
     // Modules configuration
     "hyprland/submap": {
@@ -27,8 +28,8 @@
              "HDMI-A-1": 5,
         },
         "format-icons": {
-            "default": "",
-            "active": "", 
+            "default":"",
+            "active":"", 
        },
     },
     "clock": {
@@ -37,7 +38,10 @@
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "tooltip": false
     },
- 
+    "tray": {
+       "icon-size": 21,
+    },
+
     "power-profiles-daemon": {
       "format":"{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -49,23 +53,28 @@
         "power-saver": ""
       }
     },
-    "custom/power":{
-        "format":"⏻",
-        "on-click":"$HOME/powermenu.sh"
-   },
+    "custom/menu": {
+      "format": "󰣇 {}",
+      "on-click": "exec $HOME/launcher.sh"
+    },
     "pulseaudio":{
-     "format": "{icon}",
+     "format": "{icon} {volume}%",
      "format-muted": "",
      "format-icons": {
         "default": ["",""]
-     }
+     },
+     "on-click": "pavucontrol",
    },
-   "group/misc":{
-    "modules" : [  
-       "power-profiles-daemon",
-       "pulseaudio",
-       "custom/power",
+   "group/right": {
+    "modules": [
+      "power-profiles-daemon",
+      "custom/spacing",
+      "pulseaudio",
+    
      ],
-    "orientation": "inherit",
+    "orientation": "horizontal",
+   },
+   "custom/spacing": {
+    "format": "| {}",
    },
 },
