@@ -55,7 +55,7 @@
     },
     "custom/menu": {
       "format": "󰣇 {}",
-      "on-click": "exec $HOME/launcher.sh"
+      "on-click": "exec ~/crofi.sh"
     },
     "pulseaudio":{
      "format": "{icon} {volume}%",
@@ -65,12 +65,17 @@
      },
      "on-click": "pavucontrol",
    },
+   "custom/power": {
+    "format": "{}",
+    "on-click": "exec $HOME/.config/rofi/powermenu/type-3/powermenu.sh",
+   },
    "group/right": {
     "modules": [
       "power-profiles-daemon",
       "custom/spacing",
       "pulseaudio",
-    
+      "custom/spacing",
+      "custom/power",
      ],
     "orientation": "horizontal",
    },
