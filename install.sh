@@ -33,7 +33,7 @@ read input
 
 mkfs.xfs -f /dev/sda2 && mkfs.xfs -f /dev/sda3 && mkfs.fat -F 32 /dev/sda1
 
-mount /dev/sda3 /mnt
+mount /dev/sda2 /mnt
 
 mkdir -p /mnt/efi
 
