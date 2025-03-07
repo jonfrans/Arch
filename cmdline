@@ -1,1 +1,1 @@
-root=PARTUUID=f3d4bcbb-e3ef-44e2-8c46-d29f397fba9a zswap.enabled=0 rw rootfstype=xfs
+root=PARTUUID=f3d4bcbb-e3ef-44e2-8c46-d29f397fba9a rw rootfstype=xfs
