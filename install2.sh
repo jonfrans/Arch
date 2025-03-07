@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cp /etc/sudoers /
+
+####### Instalação do yay ######
+cp /etc/sudoers /sudoers.bak
 
 echo "temp ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
@@ -15,4 +17,7 @@ makepkg -si --noconfirm
 
 userdel -r temp 
 
-mv /sudoers /etc/sudoers
+exit
+
+mv /sudoers.bak /etc/sudoers
+###### Fim ######
