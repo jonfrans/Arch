@@ -6,6 +6,16 @@ ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 
 hwclock --systohc
 
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/locale.gen > /etc/locale.gen
+
+locale-gen
+
+echo pt_BR.UTF-8 > /etc/locale.conf
+
+echo KEYMAP=br-abnt2 > /etc/vconsole.conf
+
+echo archlinux > /etc/hostname
+
 ###### Preparando a UKI ######
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/pacman.conf > /etc/pacman.conf
 
