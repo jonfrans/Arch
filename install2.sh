@@ -1,5 +1,6 @@
 #!/bin/bash
 
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/pacman.conf > /etc/pacman.conf
 
 ####### Instalação do yay ######
 cp /etc/sudoers /sudoers.bak
