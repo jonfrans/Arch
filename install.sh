@@ -50,3 +50,5 @@ else
 fi 
 
 genfstab -U /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/install2.sh)
