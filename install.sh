@@ -42,6 +42,13 @@ mkdir -p /mnt/home
 
 mount /dev/sda3 /mnt/home 
 
-pacstrap -K /mnt base git base-devel linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano
+echo "Você está usando placa da NVIDIA?(y/N)"
+read nvidia
+
+if [ $nvidia = "Y" | "y" ]; then
+   pacstrap -K /mnt base git base-devel linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano nvidia
+else
+  pacstrap -K /mnt base git base-devel linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano 
+fi 
 
 genfstab -U /mnt >> /mnt/etc/fstab
