@@ -8,4 +8,4 @@ yay -Syu systemd-numlockontty --noconfirm
 
 sudo systemctl enable numLockOnTty
 
-exit
+sudo su -
