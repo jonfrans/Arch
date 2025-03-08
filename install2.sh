@@ -130,6 +130,8 @@ read senha
 
 echo $senha | passwd $user -s
 
+echo $user > /user.txt
+
 userdel -rf temp
 
 ###### Criação da entrada do sistema ######
