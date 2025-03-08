@@ -54,8 +54,7 @@ mkinitcpio -P
 read -sp "Adicione uma senha para o root" root
 
 while [ -z $root  ]; do
-  echo "Insira um valor para a senha do root"
-  read -s root
+  read -sp "Insira um valor para a senha do root" root
 done
 
 echo $root | passwd -s
