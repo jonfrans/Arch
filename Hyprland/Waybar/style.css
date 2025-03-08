@@ -1,7 +1,6 @@
 @define-color bg rgba(22, 25, 37, 0.9);
 
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family:'JetBrainsMono Nerd Font', mono;
     font-size: 13px;
     
