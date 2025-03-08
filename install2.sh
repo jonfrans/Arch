@@ -39,7 +39,7 @@ systemctl enable NetworkManager
 
 uuid="$(blkid -s UUID -o value /dev/sda2)" 
 
-echo root=UUID=$root rw rootfstype=xfs > /etc/kernel/cmdline
+echo root=UUID=$uuid rw rootfstype=xfs > /etc/kernel/cmdline
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/linux-zen.preset > /etc/mkninitcpio.d/linux-zen.preset
 
