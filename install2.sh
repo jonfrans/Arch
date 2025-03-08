@@ -72,6 +72,33 @@ exit
 mv /sudoers.bak /etc/sudoers
 ###### Fim ######
 
+###### Manutenção de usuário ######
+echo "Adicione uma senha para o root"
+read root
+
+while [ -z $root  ]; do
+  echo "Insira um valor para a senha do root"
+  read root
+done
+
+echo $root | passwd -s
+
+echo "Digite o nome do usuário:"
+read user
+
+useradd -m -G wheel -s /bin/bash $user
+
+echo "Digite a senha do usuário:"
+read senha
+
+echo $senha | passwd $user -s
+
+echo $user > /user.txt
+
+userdel -rf temp
+
+###### Fim ######
+
 ###### Selecionar o DE/WM ######
 
 echo "Você deseja usar:"
@@ -109,33 +136,10 @@ esac
 done
 ###### Fim ######
 
-###### Manutenção de usuário ######
-echo "Adicione uma senha para o root"
-read root
-
-while [ -z $root  ]; do
-  echo "Insira um valor para a senha do root"
-  read root
-done
-
-echo $root | passwd -s
-
-echo "Digite o nome do usuário:"
-read user
-
-useradd -m -G wheel -s /bin/bash $user
-
-echo "Digite a senha do usuário:"
-read senha
-
-echo $senha | passwd $user -s
-
-echo $user > /user.txt
-
-userdel -rf temp
+rm -rf /user.txt
 
 ###### Criação da entrada do sistema ######
 mkinitcpio -P
 
 efibootmgr -c -d /dev/sda -p 1 -L "Arch Linux" -l "\EFI\Linux\arch-linux-zen.efi" -u
-###### 
+###### Fim ######
