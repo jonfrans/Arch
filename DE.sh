@@ -26,7 +26,7 @@ case $DE in
       break
       ;;
      4)
-      bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/su-cinnamon.sh)
+      bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Cinnamon/install.sh)
       break
       ;;
     *)
