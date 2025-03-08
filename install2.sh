@@ -22,6 +22,8 @@ curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/00-
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/numlock > /usr/local/bin/numlock
 
+chmod +x /usr/local/bin/numlock
+
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/numlock.service > /etc/systemd/system/numlock.service
 
 ###### Instalação de pacotes ######
