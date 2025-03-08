@@ -74,6 +74,7 @@ read -sp "Digite a senha do usuário:" senha
 
 echo $senha | passwd $user -s
 
+echo $user > /user.txt
 
 echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
