@@ -16,6 +16,10 @@ echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 
 echo archlinux > /etc/hostname
 
+mkdir -p /etc/X11/xorg.conf.d/
+
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/00-keyboard.conf > /etc/X11/xorg.conf.d/00-keyboard.conf
+
 ###### Instalação de pacotes ######
 
 pacman -Syu efibootmgr  networkmanager man intel-ucode power-profiles-daemon --noconfirm
