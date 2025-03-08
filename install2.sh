@@ -29,7 +29,7 @@ pacman -S noto-fonts-emoji noto-fonts-cjk noto-fonts ttf-space-mono-nerd otf-fon
 
 pacman -S lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam --noconfirm
 
-pacman -S 7zip btop numlockx --noconfirm
+pacman -S 7zip btop  --noconfirm
 
 systemctl enable NetworkManager
 
@@ -62,6 +62,10 @@ su -l temp
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin/
 makepkg -si --noconfirm
+
+yay -Syu systemd-numlockontty --noconfirm
+
+sudo systemctl enable numLockOnTty
 
 exit
 
