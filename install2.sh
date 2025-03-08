@@ -49,20 +49,6 @@ mkinitcpio -P
 
 ###### Fim ######
 
-sleep 3
-
-###### Instalação do yay ######
-cp /etc/sudoers /sudoers.bak
-
-echo "temp ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
-
-useradd -m -s /bin/bash temp
-echo 123 | passwd -s temp 
-
-su -l temp -c bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/yay.sh)
-
-mv /sudoers.bak /etc/sudoers
-###### Fim ######
 
 ###### Manutenção de usuário ######
 echo "Adicione uma senha para o root"
@@ -87,8 +73,19 @@ echo $senha | passwd $user -s
 
 echo $user > /user.txt
 
+###### Fim ######
 
+###### Instalação do yay ######
+cp /etc/sudoers /sudoers.bak
 
+echo "temp ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+useradd -m -s /bin/bash temp
+echo 123 | passwd -s temp 
+
+su -l temp -c bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/yay.sh)
+
+mv /sudoers.bak /etc/sudoers
 ###### Fim ######
 
 ###### Selecionar o DE/WM ######
@@ -127,6 +124,9 @@ case $DE in
 esac
 done
 ###### Fim ######
+
+
+
 
 userdel -rf temp
 rm -rf /user.txt
