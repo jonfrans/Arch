@@ -20,6 +20,10 @@ mkdir -p /etc/X11/xorg.conf.d/
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/00-keyboard.conf > /etc/X11/xorg.conf.d/00-keyboard.conf
 
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/numlock > /usr/local/bin/numlock
+
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/numlock.service > /etc/systemd/system/numlock.service
+
 ###### Instalação de pacotes ######
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/pacman.conf > /etc/pacman.conf
 
