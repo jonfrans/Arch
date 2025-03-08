@@ -75,13 +75,6 @@ echo $user > /user.txt
 
 ###### Fim ######
 
-
-
 userdel -rf temp
 rm -rf /user.txt
 
-###### Criação da entrada do sistema ######
-mkinitcpio -P
-
-efibootmgr -c -d /dev/sda -p 1 -L "Arch Linux" -l "\EFI\Linux\arch-linux-zen.efi" -u
-###### Fim ######
