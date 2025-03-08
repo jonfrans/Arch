@@ -57,15 +57,7 @@ echo "temp ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 useradd -m temp
 echo 123 | passwd -s temp 
 
-su -l temp
-
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin/
-makepkg -si --noconfirm
-
-yay -Syu systemd-numlockontty --noconfirm
-
-sudo systemctl enable numLockOnTty
+su -l temp -c bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/yay.sh)
 
 exit
 
