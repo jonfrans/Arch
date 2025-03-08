@@ -16,6 +16,19 @@ echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 
 echo archlinux > /etc/hostname
 
+###### Instalação de pacotes ######
+
+pacman -Syu efibootmgr  networkmanager man intel-ucode power-profiles-daemon --noconfirm
+
+pacman -S noto-fonts-emoji noto-fonts-cjk noto-fonts --noconfirm
+
+pacman -S lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam --noconfirm
+
+pacman -S 7zip btop --noconfirm
+
+
+###### Fim ######
+
 ###### Preparando a UKI ######
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/pacman.conf > /etc/pacman.conf
 
@@ -45,9 +58,13 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin/
 makepkg -si --noconfirm
 
-userdel -r temp 
+userdel -r -f temp 
 
 exit
 
 mv /sudoers.bak /etc/sudoers
 ###### Fim ######
+
+###### Criação da entrada do sistema ######
+efibootmgr -c -d /dev/sda -p 1 -L "Arch Linux" -l "\EFI\Linux\arch-linux-zen.efi" -u
+###### 
