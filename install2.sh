@@ -59,8 +59,6 @@ echo 123 | passwd -s temp
 
 su -l temp -c bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/yay.sh)
 
-exit
-
 mv /sudoers.bak /etc/sudoers
 ###### Fim ######
 
