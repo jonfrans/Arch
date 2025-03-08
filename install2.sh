@@ -70,6 +70,7 @@ echo "[0] Nenhuma"
 echo "[1] Hyprland"
 echo "[2] KDE Plasma"
 echo "[3] Gnome"
+echo "[4] Cinnamon"
 read DE
 while true;do
 case $DE in
@@ -88,12 +89,18 @@ case $DE in
       bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Gnome/script.sh)
       break
       ;;
+     4)
+      bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Cinnamon/install.sh)
+      break
+      ;;
     *)
       echo "Digite uma opção válida"
       ;;
 esac
 done
 ###### Fim ######
+
+userdel -rf temp
 
 ###### Criação da entrada do sistema ######
 efibootmgr -c -d /dev/sda -p 1 -L "Arch Linux" -l "\EFI\Linux\arch-linux-zen.efi" -u
