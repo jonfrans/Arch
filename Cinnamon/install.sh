@@ -23,4 +23,4 @@ case $tema in
 esac
 done
 
-sudo su -
+sudo su - -c bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/uefi.sh)
