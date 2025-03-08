@@ -1,5 +1,9 @@
 #!/bin/bash
-
+###### Instalação do yay ######
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin/
+makepkg -si --noconfirm
+###### Fim ######
 
 echo "Você deseja usar:"
 echo "[0] Nenhuma"
