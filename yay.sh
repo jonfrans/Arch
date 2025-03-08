@@ -7,3 +7,5 @@ makepkg -si --noconfirm
 yay -Syu systemd-numlockontty --noconfirm
 
 sudo systemctl enable numLockOnTty
+
+exit
