@@ -8,4 +8,4 @@ yay -Syu systemd-numlockontty --noconfirm
 
 sudo systemctl enable numLockOnTty
 
-sudo su -
+sudo su - -c bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/DE.sh) 
