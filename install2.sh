@@ -75,4 +75,4 @@ echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 ###### Fim ######
 
-bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/yay0.sh)
+bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main)
