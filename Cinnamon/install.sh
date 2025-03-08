@@ -11,6 +11,7 @@ while true; do
 case $tema in
   Y | y | "")
      yay -Syu mint-artwork --noconfirm
+     sudo systemctl enable lightdm
      break
      ;;
   N | n)
