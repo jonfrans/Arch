@@ -1,7 +1,5 @@
 #!/bin/bash
 
-su -l temp
-
 sudo pacman -Syu cinnamon cinnamon-translations
 
 echo "Você quer instalar o tema do linux mint?(Y/n)"
