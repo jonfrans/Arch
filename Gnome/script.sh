@@ -2,7 +2,7 @@
 
 sudo pacman -Syu gnome gdm
 
-systemctl enable gdm
+sudo systemctl enable gdm
 
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
 
