@@ -2,8 +2,7 @@
 
 sudo pacman -Syu cinnamon cinnamon-translations
 
-echo "Você quer instalar o tema do linux mint?(Y/n)"
-read tema
+
 
 yay -Syu mint-artwork --noconfirm
 sudo systemctl enable lightdm
