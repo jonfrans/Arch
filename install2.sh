@@ -78,3 +78,4 @@ echo $user > /user.txt
 userdel -rf temp
 rm -rf /user.txt
 
+bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/yay0.sh)
