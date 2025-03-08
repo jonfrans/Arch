@@ -14,7 +14,8 @@ case $tema in
      break
      ;;
   N | n)
-     echo "Pulando essa etapa"
+     sudo pacman -Syu lightdm lightdm-gtk-greeter
+     sudo systemctl enable lightdm
      break
      ;;
   *)
