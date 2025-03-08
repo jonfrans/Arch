@@ -51,23 +51,20 @@ mkinitcpio -P
 
 
 ###### Manutenção de usuário ######
-echo "Adicione uma senha para o root"
-read root
+read -sp "Adicione uma senha para o root" root
 
 while [ -z $root  ]; do
   echo "Insira um valor para a senha do root"
-  read root
+  read -s root
 done
 
 echo $root | passwd -s
 
-echo "Digite o nome do usuário:"
-read user
+read -p "Digite o nome do usuário:" user
 
 useradd -m -G wheel -s /bin/bash $user
 
-echo "Digite a senha do usuário:"
-read senha
+read -sp "Digite a senha do usuário:" senha
 
 echo $senha | passwd $user -s
 
