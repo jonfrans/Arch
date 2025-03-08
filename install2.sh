@@ -21,6 +21,7 @@ mkdir -p /etc/X11/xorg.conf.d/
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/00-keyboard.conf > /etc/X11/xorg.conf.d/00-keyboard.conf
 
 ###### Instalação de pacotes ######
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/pacman.conf > /etc/pacman.conf
 
 pacman -Syu efibootmgr  networkmanager man intel-ucode power-profiles-daemon --noconfirm
 
@@ -34,7 +35,6 @@ pacman -S 7zip btop --noconfirm
 ###### Fim ######
 
 ###### Preparando a UKI ######
-curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/pacman.conf > /etc/pacman.conf
 
 uuid="$(blkid -s UUID -o value /dev/sda2)" 
 
