@@ -1,6 +1,5 @@
 #!/bin/bash
 
-mv /sudoers.bak /etc/sudoers
 
 echo "Você deseja usar:"
 echo "[0] Nenhuma"
