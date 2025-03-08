@@ -10,7 +10,7 @@ curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/loc
 
 locale-gen
 
-echo pt_BR.UTF-8 > /etc/locale.conf
+echo LANG=pt_BR.UTF-8 > /etc/locale.conf
 
 echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 
