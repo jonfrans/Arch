@@ -85,7 +85,7 @@ echo $senha | passwd $user -s
 
 echo $user > /user.txt
 
-userdel -rf temp
+
 
 ###### Fim ######
 
@@ -126,6 +126,7 @@ esac
 done
 ###### Fim ######
 
+userdel -rf temp
 rm -rf /user.txt
 
 ###### Criação da entrada do sistema ######
