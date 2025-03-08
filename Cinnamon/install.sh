@@ -22,3 +22,5 @@ case $tema in
      ;; 
 esac
 done
+
+exit
