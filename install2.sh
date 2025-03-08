@@ -31,6 +31,7 @@ pacman -S lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam -
 
 pacman -S 7zip btop numlockx --noconfirm
 
+systemctl enable NetworkManager
 
 ###### Fim ######
 
