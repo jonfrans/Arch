@@ -43,11 +43,9 @@ mount /dev/sda3 /mnt/home
 echo "Você está usando placa da NVIDIA?(y/N)"
 read nvidia
 
-if [ $nvidia = "Y" | "y" ]; then
-  pacstrap -K /mnt base git base-devel linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano nvidia-dkms
-else
-  pacstrap -K /mnt base git base-devel linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano 
-fi 
+
+pacstrap -K /mnt base git base-devel linux-zen linux-zen-headers linux-firmware xfsprogs sudo nano nvidia-dkms
+
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
