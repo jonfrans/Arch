@@ -23,4 +23,4 @@ case $tema in
 esac
 done
 
-sudo su
+sudo su -
