@@ -20,7 +20,7 @@ echo archlinux > /etc/hostname
 
 pacman -Syu efibootmgr  networkmanager man intel-ucode power-profiles-daemon --noconfirm
 
-pacman -S noto-fonts-emoji noto-fonts-cjk noto-fonts --noconfirm
+pacman -S noto-fonts-emoji noto-fonts-cjk noto-fonts ttf-space-mono-nerd otf-font-awesome --noconfirm
 
 pacman -S lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam --noconfirm
 
@@ -58,11 +58,41 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin/
 makepkg -si --noconfirm
 
-userdel -r -f temp 
-
 exit
 
 mv /sudoers.bak /etc/sudoers
+###### Fim ######
+
+###### Selecionar o DE/WM ######
+
+echo "Você deseja usar:"
+echo "[0] Nenhuma"
+echo "[1] Hyprland"
+echo "[2] KDE Plasma"
+echo "[3] Gnome"
+read DE
+while true;do
+case $DE in
+    0)
+      continue
+      ;;
+    1)
+      bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Hyprland/install.sh)
+      break
+      ;;
+    2)
+      bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/KDE/install.sh)
+      break
+      ;;
+    3)
+      bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Gnome/script.sh)
+      break
+      ;;
+    *)
+      echo "Digite uma opção válida"
+      ;;
+esac
+done
 ###### Fim ######
 
 ###### Criação da entrada do sistema ######
