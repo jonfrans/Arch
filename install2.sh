@@ -51,7 +51,8 @@ mkinitcpio -P
 
 
 ###### Manutenção de usuário ######
-read -sp "Adicione uma senha para o root" root
+echo "Adicione uma senha para o root:"
+read -s root
 
 while [ -z $root  ]; do
   read -sp "Insira um valor para a senha do root" root
