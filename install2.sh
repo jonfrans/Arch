@@ -69,6 +69,9 @@ echo $senha | passwd $user -s
 
 echo $user > /user.txt
 
+echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+
 ###### Fim ######
 
 bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/DE.sh)
