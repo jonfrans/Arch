@@ -29,7 +29,7 @@ pacman -S noto-fonts-emoji noto-fonts-cjk noto-fonts ttf-space-mono-nerd otf-fon
 
 pacman -S lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam --noconfirm
 
-pacman -S 7zip btop --noconfirm
+pacman -S 7zip btop numlockx --noconfirm
 
 
 ###### Fim ######
