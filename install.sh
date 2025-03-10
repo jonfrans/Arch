@@ -42,7 +42,6 @@ mount /dev/sda3 /mnt/home
 
 pacstrap -K /mnt base git base-devel linux linux-headers linux-firmware xfsprogs sudo nano nvidia-dkms
 
-
 genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/install2.sh)
