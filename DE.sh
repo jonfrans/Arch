@@ -7,7 +7,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin/
 makepkg -si --noconfirm
 
-yay -Syu oh-my-zsh-git --noconfirm
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ###### Fim ######
 
 echo "Você deseja usar:"
