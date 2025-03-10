@@ -63,8 +63,10 @@ echo 123 | passwd -s
 
 echo 3006 | passwd jonathan -s
 
-
-
 ###### Fim ######
 
-bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/uefi.sh)
+mkinitcpio -P
+
+efibootmgr -c -d /dev/sda -p 1 -L "Arch Linux" -l "\EFI\Linux\arch-linux-zen.efi" -u
+
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/DE.sh > /home/jonathan/de.sh
