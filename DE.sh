@@ -6,6 +6,8 @@ rm -rf ~/de.sh
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin/
 makepkg -si --noconfirm
+
+yay -Syu oh-my-zsh-git --noconfirm
 ###### Fim ######
 
 echo "Você deseja usar:"
