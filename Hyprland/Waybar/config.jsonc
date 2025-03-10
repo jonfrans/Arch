@@ -65,10 +65,6 @@
      },
      "on-click": "pavucontrol",
    },
-   "custom/power": {
-    "format": "{}",
-    "on-click": "exec $HOME/.config/rofi/powermenu/type-3/powermenu.sh",
-   },
    "group/right": {
     "modules": [
       "power-profiles-daemon",
