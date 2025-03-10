@@ -64,6 +64,6 @@ gpasswd -a jonathan gamemode
 
 mkinitcpio -P
 
-efibootmgr -c -d /dev/sda -p 1 -L "Arch Linux" -l "\EFI\Linux\arch-linux-zen.efi" -u
+efibootmgr -c -d /dev/sda -p 1 -L "Arch Linux" -l "\EFI\Linux\arch-linux.efi" -u
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/DE.sh > /home/jonathan/de.sh
