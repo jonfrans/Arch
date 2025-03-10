@@ -3,7 +3,7 @@
 user="$(cat /user.txt)"
 home=/home/$user 
 
-sudo pacman -Syu hyprland hyprpolkitagent qt5-wayland qt6-wayland rofi-wayland  pipewire pipewire-pulse pavucontrol wireplumber  kitty --noconfirm
+sudo pacman -Syu hyprland hyprpolkitagent qt5-wayland qt6-wayland rofi-wayland xdg-desktop-portal-hyprland pipewire pipewire-pulse pavucontrol wireplumber  kitty --noconfirm
 
 mkdir -p $home/.config/hypr/
 
