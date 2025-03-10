@@ -60,6 +60,8 @@ echo 3006 | passwd jonathan -s
 
 gpasswd -a jonathan gamemode
 
+echo "jonathan ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 ###### Fim ######
 
 mkinitcpio -P
