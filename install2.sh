@@ -30,13 +30,7 @@ curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/num
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/pacman.conf > /etc/pacman.conf
 
-pacman -Syu efibootmgr  networkmanager man intel-ucode power-profiles-daemon --noconfirm
-
-pacman -S noto-fonts-emoji noto-fonts-cjk noto-fonts ttf-space-mono-nerd otf-font-awesome --noconfirm
-
-pacman -S lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam --noconfirm
-
-pacman -S 7zip btop numlockx unrar rar  --noconfirm
+pacman -Syu efibootmgr networkmanager man intel-ucode power-profiles-daemon noto-fonts-emoji noto-fonts-cjk noto-fonts ttf-space-mono-nerd otf-font-awesome lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam 7zip btop numlockx unrar rar --noconfirm 
 
 systemctl enable NetworkManager
 
@@ -46,7 +40,7 @@ systemctl enable NetworkManager
 
 uuid="$(blkid -s UUID -o value /dev/sda2)" 
 
-echo root=UUID=$uuid rw rootfstype=xfs > /etc/kernel/cmdline
+echo root=UUID=$uuid rw rootfstype=xfs sysrq_always_enabled=1 > /etc/kernel/cmdline
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/linux-zen.preset > /etc/mkinitcpio.d/linux-zen.preset
 
