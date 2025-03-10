@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf ~/de.sh
+
 ###### Instalação do yay ######
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin/
