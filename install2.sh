@@ -42,7 +42,7 @@ uuid="$(blkid -s UUID -o value /dev/sda2)"
 
 echo root=UUID=$uuid rw rootfstype=xfs sysrq_always_enabled=1 intel_iommu=on > /etc/kernel/cmdline
 
-curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/linux-zen.preset > /etc/mkinitcpio.d/linux-zen.preset
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/linux.preset > /etc/mkinitcpio.d/linux.preset
 
 mkdir -p /efi/EFI/Linux/
 
