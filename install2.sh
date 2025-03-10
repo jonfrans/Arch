@@ -27,6 +27,7 @@ chmod +x /usr/local/bin/numlock
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/numlock.service > /etc/systemd/system/numlock.service
 
 ###### Instalação de pacotes ######
+
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/pacman.conf > /etc/pacman.conf
 
 pacman -Syu efibootmgr  networkmanager man intel-ucode power-profiles-daemon --noconfirm
@@ -35,7 +36,7 @@ pacman -S noto-fonts-emoji noto-fonts-cjk noto-fonts ttf-space-mono-nerd otf-fon
 
 pacman -S lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam --noconfirm
 
-pacman -S 7zip btop numlockx  --noconfirm
+pacman -S 7zip btop numlockx unrar rar  --noconfirm
 
 systemctl enable NetworkManager
 
@@ -62,6 +63,8 @@ useradd -m -G wheel -s /bin/bash jonathan
 echo 123 | passwd -s
 
 echo 3006 | passwd jonathan -s
+
+gpasswd -a jonathan gamemode
 
 ###### Fim ######
 
