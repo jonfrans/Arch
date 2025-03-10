@@ -30,7 +30,7 @@ curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/num
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/pacman.conf > /etc/pacman.conf
 
-pacman -Syu efibootmgr networkmanager man intel-ucode power-profiles-daemon noto-fonts-emoji noto-fonts-cjk noto-fonts ttf-space-mono-nerd otf-font-awesome lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam 7zip btop numlockx unrar rar --noconfirm 
+pacman -Syu efibootmgr networkmanager man intel-ucode power-profiles-daemon noto-fonts-emoji noto-fonts-cjk noto-fonts ttf-space-mono-nerd otf-font-awesome lib32-nvidia-utils wine wine-gecko wine-mono gamemode mangohud steam 7zip btop numlockx unrar --noconfirm 
 
 systemctl enable NetworkManager
 
