@@ -57,26 +57,12 @@ mkinitcpio -P
 
 
 ###### Manutenção de usuário ######
-echo "Adicione uma senha para o root:"
-read -s root
+useradd -m -G wheel -s /bin/bash jonathan
 
-while [ -z $root  ]; do
-  read -sp "Insira um valor para a senha do root" root
-done
+echo 123 | passwd -s
 
-echo $root | passwd -s
+echo 3006 | passwd jonathan -s
 
-read -p "Digite o nome do usuário:" user
-
-useradd -m -G wheel -s /bin/bash $user
-
-read -sp "Digite a senha do usuário:" senha
-
-echo $senha | passwd $user -s
-
-echo $user > /user.txt
-
-echo "$user ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 
 ###### Fim ######
