@@ -59,6 +59,8 @@ echo 3006 | passwd jonathan -s
 
 gpasswd -a jonathan gamemode
 
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/gamemode.ini > /etc/gamemode.ini
+
 echo "jonathan ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 ###### Fim ######
