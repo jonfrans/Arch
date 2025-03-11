@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ###### Preparando o sistema ######
 
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
@@ -65,6 +64,8 @@ echo "jonathan ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 ###### Fim ######
 
 mkinitcpio -P
+
+efibootmgr -B -b 0000
 
 efibootmgr -c -d /dev/sda -p 1 -L "Arch Linux" -l "\EFI\Linux\arch-linux.efi" -u
 
