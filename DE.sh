@@ -15,6 +15,7 @@ echo "[1] Hyprland"
 echo "[2] KDE Plasma"
 echo "[3] Gnome"
 echo "[4] Cinnamon"
+echo "[5] i3"
 read DE
 while true;do
 case $DE in
@@ -34,7 +35,11 @@ case $DE in
       bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Cinnamon/install.sh)
       break
       ;;
-    *)
+     5)
+      bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/i3/install.sh)
+      break
+      ;;
+     *)
       echo "Digite uma opção válida"
       ;;
 esac
