@@ -1,0 +1,13 @@
+(defwindow osd
+:stacking "fg"
+:wm-ignore true
+:windowtype "normal"
+:geometry (geometry :width "10%" :height "8%" :anchor "bottom center" :y "-35px" )
+(osd))
+
+(defwidget osd []
+(label :text volume))
+
+
+(defpoll volume :interval "5s"
+"scripts/volume.sh")
