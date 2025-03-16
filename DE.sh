@@ -16,6 +16,7 @@ echo "[2] KDE Plasma"
 echo "[3] Gnome"
 echo "[4] Cinnamon"
 echo "[5] i3"
+echo "[6] Cosmic"
 read DE
 while true;do
 case $DE in
@@ -37,6 +38,10 @@ case $DE in
       ;;
      5)
       bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/i3/install.sh)
+      break
+      ;;
+     6)
+      bash <(curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Cosmic/install.sh)
       break
       ;;
      *)
