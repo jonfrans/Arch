@@ -49,6 +49,17 @@ mkinitcpio -P
 
 ###### Fim ######
 
+###### Configurando zram ######
+
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/99-vm-zram-parameters.conf > /etc/sysctl.d/99-vm-zram-parameters.conf
+
+curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/zram-generator.conf > /etc/systemd/zram-generator.conf
+
+systemctl daemon-reload 
+
+systemctl start systemd-zram-setup@zram0.service
+
+###### Fim ######
 
 ###### Manutenção de usuário ######
 useradd -m -G wheel -s /bin/bash jonathan
