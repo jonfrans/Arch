@@ -40,7 +40,7 @@ mkdir -p /mnt/home
 
 mount /dev/sda3 /mnt/home 
 
-pacstrap -K /mnt base git base-devel linux linux-headers linux-firmware xfsprogs sudo nano nvidia
+pacstrap -K /mnt base git base-devel linux linux-headers linux-firmware xfsprogs sudo nano nvidia zram-generator
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
