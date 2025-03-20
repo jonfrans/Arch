@@ -10,8 +10,5 @@ mkdir -p ~/.config/hypr/
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Hyprland/hyprland.conf > ~/.config/hypr/hyprland.conf
 
-git clone https://github.com/elkowar/eww
 
-cd eww
 
-cargo build --release --no-default-features --features=wayland
