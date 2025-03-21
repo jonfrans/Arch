@@ -51,6 +51,16 @@ mkinitcpio -P
 
 ###### Fim ######
 
+###### Chaotic aur ######
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" > /etc/pacman.conf
+###### Fim ######
+
 ###### Configurando zram ######
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/misc/99-vm-zram-parameters.conf > /etc/sysctl.d/99-vm-zram-parameters.conf
