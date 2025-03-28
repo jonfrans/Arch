@@ -36,9 +36,9 @@ exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/archwave.png
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id  ~/.config/eww/scripts/volume.sh -i
-bindsym XF86AudioLowerVolume exec --no-startup-id  ~/.config/eww/scripts/volume.sh -d
-bindsym XF86AudioMute exec --no-startup-id ~/.config/eww/scripts/volume.sh -m
+bindsym XF86AudioRaiseVolume exec --no-startup-id 
+bindsym XF86AudioLowerVolume exec --no-startup-id 
+bindsym XF86AudioMute exec --no-startup-id 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -54,12 +54,12 @@ bindsym $mod+t exec kitty
 bindsym $mod+q kill
 
 # change focus
-bindsym $mod+Shift+Left exec --no-startup-id python ~/Documentos/Python/move_to.py --prev
-bindsym $mod+Shift+Right exec --no-startup-id python ~/Documentos/Python/move_to.py --next
+bindsym $mod+Shift+Left exec --no-startup-id python ~/move_to.py --prev
+bindsym $mod+Shift+Right exec --no-startup-id python ~/move_to.py --next
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left exec --no-startup-id python ~/Documentos/Python/change_ws.py -p
-bindsym $mod+Right exec --no-startup-id python ~/Documentos/Python/change_ws.py -n
+bindsym $mod+Left exec --no-startup-id python ~/change_ws.py -p
+bindsym $mod+Right exec --no-startup-id python ~/change_ws.py -n
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
