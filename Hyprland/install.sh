@@ -10,3 +10,11 @@ curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Hyprland
 
 curl -s https://raw.githubusercontent.com/jonfrans/Arch/refs/heads/main/Hyprland/Waybar/style.css > ~/.config/waybar/style.css
 
+git clone --depth=1 https://github.com/adi1090x/rofi.git
+
+cd rofi
+
+chmod +x setup.sh
+
+./setup.sh
+
